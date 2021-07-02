@@ -1,0 +1,86 @@
+<div class="m-3">
+  <form class="form-container" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col">
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Nome</mat-label>
+          <input matInput [(ngModel)]="cliente.nome" name="nome" #nome="ngModel" required />
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Cep</mat-label>
+          <input
+            matInput
+            (blur)="buscarCep($event)"
+            [(ngModel)]="cliente.cep"
+            name="cep"
+            #cep="ngModel"
+            required
+          />
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Rua</mat-label>
+          <input matInput [(ngModel)]="cliente.logradouro" #logradouro="ngModel" name="logradouro" />
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Bairro</mat-label>
+          <input matInput [(ngModel)]="cliente.bairro" name="bairro" />
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Cidade</mat-label>
+          <input matInput [(ngModel)]="cliente.localidade" name="localidade" />
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Estado</mat-label>
+          <input matInput [(ngModel)]="cliente.uf" name="uf" />
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Número</mat-label>
+          <input matInput [(ngModel)]="cliente.numero" name="numero" #numero="ngModel" required />
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Complemento</mat-label>
+          <input
+            matInput
+            [(ngModel)]="cliente.complemento"
+            name="complemento"
+          />
+        </mat-form-field>
+      </div>
+    </div>
+
+    <button type="submit" mat-raised-button class="botaoadicionar"  [disabled]="nome.errors?.required||cep.errors?.required||logradouro.errors?.required||numero.errors?.required" >Adicionar</button>
+    <!-- Voltar para pagina anterior -->
+    <button
+      class="mx-3 btncor"
+      type="button"
+      mat-raised-button
+      onclick="window.history.back()"
+    >
+      Voltar
+    </button>
+  </form>
+</div>
+
