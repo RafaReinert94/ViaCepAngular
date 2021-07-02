@@ -9,7 +9,11 @@ ___________________________________________________________________________
 Para o preparo do ambiente de programação:
 
 ng new ViaCep
+
 npm i firebase
+
 ng add @angular/fire
+
 ng add @angular/material
+
 ng add @ng-bootstrap/ng-bootstrap
