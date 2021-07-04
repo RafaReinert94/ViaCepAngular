@@ -17,3 +17,5 @@ ng add @angular/fire
 ng add @angular/material
 
 ng add @ng-bootstrap/ng-bootstrap
+
+ng add angular-cli-ghpages (criação da página no github)
