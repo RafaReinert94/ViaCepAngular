@@ -62,7 +62,7 @@ export class AddComponent implements OnInit {
   }
 
 
-  //metodo para salvar o formulario
+  //metodo para salvar o cliente no banco de dados
    onSubmit(){
     console.log(this.cliente)
     this.db.salvarClienteAngularFirestore(this.cliente);

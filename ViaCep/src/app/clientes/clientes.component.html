@@ -1,3 +1,5 @@
+
+<!-- Botao para adicionar novo cliente -->
 <div >
   <div class="m-3">
     <button class="btncor" mat-raised-button (click)="addCliente()">
@@ -6,11 +8,13 @@
   </div>
   <div class="m-3">
 
+<!-- Filtro que busca tudo que for digitado -->
     <mat-form-field appearance="standard">
       <mat-label>Filtro</mat-label>
       <input matInput (keyup)="applyFilter($event)"  #input>
     </mat-form-field>
 
+<!-- tabela para exibir os clientes -->
     <table
       mat-table
       [dataSource]="data"
